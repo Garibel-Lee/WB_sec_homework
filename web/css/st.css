@@ -1,0 +1,21 @@
+input:focus,textarea:focus{
+    border:1px solid #f00;
+    background:#fcc;
+}
+
+textarea{
+    width:230px;
+    height:50px;
+}
+
+body
+{
+    font-size:15px;
+    /* 字体的样式 */
+    font-family:Microsoft YaHei;
+}
+
+select option{
+    font-size:10px;
+    font-family:Microsoft YaHei;
+}

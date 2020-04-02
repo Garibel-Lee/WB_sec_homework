@@ -1,0 +1,10 @@
+<taglib>
+  <tlib-version>1.0</tlib-version>
+  <jsp-version>2.0</jsp-version>
+  <short-name>Example TLD</short-name>
+  <tag>
+    <name>my2</name><!-- 要使用的标签名 -->
+    <tag-class>com.wbhz.mytag.MyTag2</tag-class><!-- 要使用的类 -->
+    <body-content>scriptless</body-content><!-- 确定标签不是空标签 -->
+  </tag>
+</taglib>

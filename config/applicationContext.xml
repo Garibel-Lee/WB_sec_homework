@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<!-- id：给bean一个名字（唯一），class：包+类名  后面通过反射机制加载解析这个类  -->
+	<bean id="userDao" class="day15.dao.impl.UserDaoImpl" />
+	<bean id="moodDao" class="day15.dao.impl.MoodDaoImpl" />
+	<bean id="commentDao" class="day15.dao.impl.CommentDaoImpl" />
+	<bean id="tran" class="day15.transaction.impl.TransactionImpl" />
+
+	<bean id="userService" class="day15.service.impl.UserServiceImpl">
+		<!--
+             name="transaction" 对应set方法，在反射过程中要进行转换 “set”+第一个单词的首字母打下，其他不变，通过这种方式获得set方法，与真正属性名称无关
+             ref="" 引用已经存在的bean对象
+             property 处理对象与对象的相互注入
+             如何动态的替换对应的bean，而非死编码？？使用xml进行配置
+             setTransaction
+             transaction
+         -->
+		<property name="transaction" ref="tran" />
+		<property name="userDao" ref="userDao" />
+	</bean>
+	<bean id="moodService" class="day15.service.impl.MoodServiceImpl">
+		<!--
+             name="transaction" 对应set方法，在反射过程中要进行转换 “set”+第一个单词的首字母打下，其他不变，通过这种方式获得set方法，与真正属性名称无关
+             ref="" 引用已经存在的bean对象
+             property 处理对象与对象的相互注入
+             如何动态的替换对应的bean，而非死编码？？使用xml进行配置
+             setTransaction
+             transaction
+         -->
+		<property name="transaction" ref="tran" />
+		<property name="moodDao" ref="moodDao" />
+	</bean>
+	<bean id="commentService" class="day15.service.impl.CommentServiceImpl">
+		<!--
+             name="transaction" 对应set方法，在反射过程中要进行转换 “set”+第一个单词的首字母打下，其他不变，通过这种方式获得set方法，与真正属性名称无关
+             ref="" 引用已经存在的bean对象
+             property 处理对象与对象的相互注入
+             如何动态的替换对应的bean，而非死编码？？使用xml进行配置
+             setTransaction
+             transaction
+         -->
+		<property name="moodDao" ref="moodDao" />
+		<property name="transaction" ref="tran" />
+		<property name="commentDao" ref="commentDao" />
+	</bean>
+</beans>

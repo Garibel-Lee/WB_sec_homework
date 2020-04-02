@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="../../resources/jquery-validation-1.19.1/lib/jquery.js"></script>
+    <script type="text/javascript" src="../../resources/jquery-validation-1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="../../resources/jquery-validation-1.19.1/dist/localization/messages_zh.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>表单验证</title>
+    <!-- 此处引用外部css样式 -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <script type="text/javascript">
+
+
+
+        $.validator.setDefaults({
+            submitHandler: function() {
+                alert("提交事件!");
+            }
+        });
+        $().ready(function() {
+            $("#myForm").validate();
+        });
+
+            $(function(){
+
+                //确认密码
+                $("#pwdc").blur(function(){
+                    var str = $("#password").val();
+                    var str1 = $("#pwdc").val();
+                    var msg = $("#checktext3");
+                    if(str1 != str){
+                        msg.text("两次输入的密码不一致");
+                        msg.removeClass("ok");
+                        msg.addClass("error");
+                    }else{
+                        msg.text("密码一致");
+                        msg.removeClass("error");
+                        msg.addClass("ok");
+                    }
+                });
+
+                //身份证号
+                $("#id").blur(function(){
+                    var str = $("#id").val();
+                    var msg = $("#checktext9");
+
+
+                    var isint=parseInt(str[17])
+                    if(str.length!=18||(isNaN(isint)&&str[17]!="x")){
+                        msg.text("长度必须为18位且最后一位必须是数字或者x");
+                        msg.removeClass("ok");
+                        msg.addClass("error");
+                    }
+                    else{
+                        msg.text("身份证正确");
+                        msg.removeClass("error");
+                        msg.addClass("ok");
+                    }
+                    for(var i=0;i<str.length-1;i++){
+
+                        if(isNaN(str[i])){
+                            msg.text("前17位必须为数字");
+                            msg.removeClass("ok");
+                            msg.addClass("error");
+                        }
+                    }
+                });
+
+
+            });
+
+    </script>
+
+</head>
+<body>
+<!-- <form action ="跳转页面" method ="get"|"post" name ="表单名称" target ="打开方式" enctype="multipart/form-data" > -->
+<!-- onsubmit()函数在返回值为true时提交表单。 -->
+
+<form action="#"   id="myForm" method="get" onsubmit="return check()">
+    <fieldset>
+        <legend>
+            表单及时验证——jquery.validate框架
+        </legend>
+        <table align="left" style="">
+            <tr>
+                <td>用户名:</td>
+                <td><input type="text" required name="username" id="username" minlength="6" maxlength="16"/></td>
+                <td id="checktext1"></td>
+            </tr>
+
+            <tr>
+                <td>姓名:</td>
+                <td><input type="text"  name="name" id="name" required/></td>
+                <td id="checktext0"></td>
+            </tr>
+            <!-- onblur 事件处理程序:当元素或窗口失去焦点时触发该事件 -->
+            <!-- onchange事件处理程序:当表单元素获取焦点，并且内容发生改变时，触发该事件 -->
+            <tr>
+                <td>密码:</td>
+                <td><input type="password" required name="password" id="password" minlength="6" maxlength="16"/></td>
+                <td id="checktext2"></td>
+            </tr>
+
+            <tr>
+                <td>确认密码：</td>
+                <td><input type="password" required name="pwdc" id="pwdc"/></td>
+                <td id="checktext3"></td>
+            </tr>
+
+            <tr>
+                <td>年龄</td>
+                <td>
+                    <input type="number" name="age" id="age" max="100" min="18"/>
+                </td>
+                <td id="checktext4"></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td>出生日期：</td>
+                <td><input required type="date" name="date" id="txtDate" /></td>
+                <td id="checktext6"></td>
+            </tr>
+
+            <tr>
+                <td>手机</td>
+                <td>
+                    <input type="number"  required name="phone" maxlength="11" minlength="11" id="phone" />
+                </td>
+                <td id="checktext7"></td>
+            </tr>
+
+            <tr>
+                <td>电子邮件：</td>
+                <td><input type="email" name="email" id="email" required /></td>
+                <td id="checktext8"></td>
+            </tr>
+
+            <tr>
+                <td>身份证：</td>
+                <td><input type="text" name="id"  id="id"  required/></td>
+                <td id="checktext9"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" name="submit" value="提交"/>
+                    <input type="reset" name="reset" value="重置"/>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+</body>
+</html>

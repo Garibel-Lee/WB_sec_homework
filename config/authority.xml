@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item>/regist.jsp</item>
+	<item>/regist.do</item>
+	<item>/login.do</item>
+	<item>/login.jsp</item>
+	<item>/</item>
+	<item>/LoginOut.do</item>
+	<item>/ImageJsp.jsp</item>
+	<item>/showAllMoods.jsp</item>
+	<item>/showallMoods.do</item>
+	<item>/Mood_doDelete.jsp</item>
+	<item>/showMoodInfo.jsp</item>
+	<item>/Mood_doRegist.do</item>
+
+</items>

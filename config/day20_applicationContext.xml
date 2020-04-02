@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<!-- id：给bean一个名字（唯一），class：包+类名  后面通过反射机制加载解析这个类  -->
+	<!-- 先放置Dao的配置 -->
+	<bean id="userDao" class="day20.dao.impl.UserDaoImpl" />
+	<bean id="moodDao" class="day20.dao.impl.MoodDaoImpl" />
+	<bean id="commentDao" class="day20.dao.impl.CommentDaoImpl" />
+	<bean id="tran" class="day20.transaction.impl.TransactionImpl" />
+	<!-- 先放置Dao的配置 -->
+	<!-- 再放置Service的配置 -->
+	<bean id="userService" class="day20.service.impl.UserServiceImpl">
+		<!--
+             name="transaction" 对应set方法，在反射过程中要进行转换 “set”+第一个单词的首字母打下，其他不变，通过这种方式获得set方法，与真正属性名称无关
+             ref="" 引用已经存在的bean对象
+             property 处理对象与对象的相互注入
+             如何动态的替换对应的bean，而非死编码？？使用xml进行配置
+             setTransaction
+             transaction
+         -->
+		<property name="transaction" ref="tran" />
+		<property name="userDao" ref="userDao" />
+	</bean>
+	<bean id="moodService" class="day20.service.impl.MoodServiceImpl">
+		<property name="transaction" ref="tran" />
+		<property name="moodDao" ref="moodDao" />
+	</bean>
+	<bean id="commentService" class="day20.service.impl.CommentServiceImpl">
+		<property name="transaction" ref="tran"/>
+		<property name="commentDao" ref="commentDao" />
+	</bean>
+	<!-- 再放置Service的配置 -->
+	<!-- 最后放置acttion的配置 -->
+	<bean id="userAction" class="day20.action.UserAction">
+		<property name="userService" ref="userService" />
+	</bean>
+	<bean id="moodAction" class="day20.action.MoodAction">
+		<property name="moodService" ref="moodService" />
+	</bean>
+	<bean id="commentAction" class="day20.action.CommentAction">
+		<property name="commentService" ref="commentService" />
+	</bean>
+<!--	<bean id="commentAction" class="day20.action.CommentAction">
+		<property name="commentService" ref="commentService" />
+	</bean>-->
+	<!-- 最后放置acttion的配置 -->
+</beans>

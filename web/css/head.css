@@ -1,0 +1,101 @@
+@CHARSET "UTF-8";
+#content{
+	background-image: url('../resources/imgs/h_bg.jpg');
+	width:980px;
+	height:130px;
+	background-position: -20px 0px;
+}
+#logo{
+	width:500px;
+	height:95px;
+	float:left;/*向左浮动*/
+}
+#daohang{
+	width:450px;
+	height:40px;
+	float:right;/*向右浮动*/
+}
+
+#daohang ul{
+	list-style: none;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+#daohang ul li{
+	float:left;/*实现浮动效果，使所有的选项放到一行中*/
+	width:55px;
+	height:20px;
+	
+	text-align: center;
+	line-height: 20px;
+}
+#daohang li a{
+	text-decoration: none;
+	color:black;
+}
+
+#daohang li a:hover{
+	/* 编写超链接的伪类样式 */
+	color:red;
+	text-decoration: underline;
+}
+#daohang .img{
+	background-image: url('../resources/imgs/icon.gif');
+	width:20px;
+	background-position: -5px -5px;
+}
+#daohang .help{
+	background-position: -30px -5px;
+}
+#daohang .join{
+	background-position: -88px -5px;
+}
+#daohang .index{
+	background-position: -114px -5px;
+}
+#daohang .btn{
+	background-position: -1px -28px;
+	background-repeat:no-repeat;
+	width:44px;
+}
+#hello{
+	width:450px;
+	height:30px;
+	float:left;/*向左浮动*/
+	margin-top: 25px;/*距离上面一个div为20个像素*/
+	letter-spacing : 5px;/* 字体之间的边距 */
+}
+#menu{
+	width:100%;/*沿用父容器的宽度*/
+	height:30px;
+	float:left;/*向左浮动*/
+}
+#menu #menu1{
+	width:700px;
+	float: left;
+}
+#menu #menu1 ul{
+	list-style: none;
+}
+#menu #menu1 ul li{
+	float:left;
+	padding-top:10px;
+	margin-left: 8px;
+}
+#menu #menu1 ul li a{
+	text-align:center;
+	text-decoration:none;
+	font-size:16px;
+	display:inline-block;/*行级块样式*/
+	width:75px;
+	height:25px;
+	font-weight: 800;
+}
+#menu #menu1 ul li a:hover{
+	background-image: url('../resources/imgs/nav_bg.gif');
+	background-position: -5px -5px;
+}
+#menu #search{
+	width:250px;
+	float: right;
+}

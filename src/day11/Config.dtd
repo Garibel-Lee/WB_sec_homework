@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!ELEMENT beans (bean+)>
+        <!ELEMENT bean (property+)>
+        <!ELEMENT property (#PCDATA)>
+
+        <!ATTLIST bean id ID #IMPLIED>
+        <!ATTLIST bean class CDATA #IMPLIED>
+        <!ATTLIST bean name CDATA #IMPLIED>
+        <!ATTLIST property name CDATA #IMPLIED>
+        <!ATTLIST property value CDATA #IMPLIED>

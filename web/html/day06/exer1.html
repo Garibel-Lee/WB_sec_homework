@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<div id="number_table"></div>
+
+<script>
+    //绑定元素
+    var numberTable = document.getElementById('number_table');
+
+    var html = '';
+
+    //第一层循环，1-9
+    var i=1;
+    do
+    {
+        html += '<p>';
+        //第二层循环，j*i，j也是从1开始，始终小于等于i
+        for(var j=1;j<i+1;j++)
+        {
+            html += '<span>'+ i + '*' + j + '=' + i*j +'</span>&nbsp;&nbsp;';
+        }
+        html += '</p>';
+        i++;
+    }while(i<10)
+
+    //页面显示结果
+    numberTable.innerHTML = html;
+
+
+
+</script>
+
+<body>
+
+</body>
+</html>

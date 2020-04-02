@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+function tower(){
+	
+	var str="";
+    //打印行数是7
+    for(var i = 0; i < 7; i++) {
+        //前四行，每行递增两个
+        if(i <= 3) {
+            for(var j = 1; j <= 3 - i; j++) {
+                str+="<span style='white-space:pre;'>"+"&emsp;"+"</span>";
+            }
+            for(var j = 0; j < i * 2 + 1; j++) {
+               str+="＊";
+            }
+        } else {
+            for(var j = 1; j <= i - 3; j++) {
+                str+="<span style='white-space:pre;'>"+"&emsp;"+"</span>";
+            }
+            //i=4,打印5个
+            //i=5,打印3个
+            //i=6,打印1个
+            for(var j = (7 - i) * 2 - 1; j > 0; j--) {
+               str+="＊";
+            }
+        }
+       str+="<br/>";
+    }
+	document.getElementById("sad").innerHTML=str;
+	
+}
+</script>
+<body>
+ <button id="lcq"  onclick="tower()">金字塔</button>
+<div id="sad">
+</div>
+
+</body>
+</html>

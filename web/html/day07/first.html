@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div{
+            float: left;
+        }
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script >
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#im1").clone().appendTo("#div1");
+        });
+    });
+    $(document).ready(function(){
+        $("#btn2").click(function(){
+            $("#im2").clone().appendTo("#div3");
+        });
+    });
+
+</script>
+<body>
+<h2>喜欢的水果</h2>
+
+<button id="btn1">增加一幅图片
+</button>
+<button id="btn2">复制原图
+</button>
+<br><br>
+<div style="">
+    <div id="div1" >
+
+
+    </div>
+    <div id="div2">
+        <img id="im1" src="../../resources/images_day07/day07_2.jpg">
+        <img id="im2" src="../../resources/images_day07/day07_3.jpg">
+    </div>
+    <div id="div3" >
+
+
+    </div>
+</div>
+
+
+</body>
+</html>

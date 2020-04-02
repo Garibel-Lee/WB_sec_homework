@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+#show{
+
+	width:524px;
+	height:410px;
+	padding-top: 65px; 
+	margin-left:20px;
+}
+dl,dt,dd{
+	margin:0px;
+	padding:0px;
+	font-size: 12px;
+}
+dl{
+	float:left;
+	width:170px;
+	height:120px;
+}
+#showimg{
+	width:80px;
+}
+dt{
+	width:170px;
+	height:80px;
+	text-align: center;
+}
+dd{
+	width:150px;
+	height:30px;
+	text-align: center;
+}
+a{
+	text-decoration: none;
+	color:black;
+}
+a:hover{
+	text-decoration: underline;
+	color:red;
+}

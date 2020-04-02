@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>作业二</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<style type="text/css">
+             .box input{
+                background: url(/resources/images/999.png) no-repeat;
+                background-position: 138px;
+                background-szie:50% 50%
+               
+                
+            }
+        </style>
+</head>
+
+<body>
+	<form action="" method="post">
+		<table>
+			<tr>
+				<td>用户名:</td>
+				<td><input type="text" size="16" maxlength="10" />(可包含a-z、0-9和下划线)</td>
+				<td><img src="/resources/images/read.gif"> 阅读相关事项:</td>
+			</tr>
+
+			<tr>
+				<td>密码:</td>
+				<td><div class="box"><input type="password"/>(至少包含6字符)</div></td>
+				<td rowspan="0"> <textarea rows="15" cols="50">欢迎阅读服务条款协议...</textarea></td>
+			</tr>
+			<tr>
+				<td>再次输入密码:</td>
+				<td><div class="box"><input type="password" /></div></td>
+			</tr>
+			<tr>
+				<td>电子邮箱:</td>
+
+				<td><input type="email" />(必须包含@字符)</td>
+			</tr>
+			<!-- 单选框 -->
+			<tr>
+
+				<td>性别:</td>
+
+				<td><input type="radio" name="sex"><img
+					src="/resources/images/Male.gif">男<input type="radio"
+					name="sex" checked="checked"><img
+					src="/resources/images/Female.gif">女</td>
+			</tr>
+			
+			<tr>
+
+				<td>头像:</td>
+
+				<td><button>文件上传</button> <label>未选择任何文件</label></td>
+			</tr>
+			
+			<tr>
+				<!-- 复选框 -->
+				<td>爱好:</td>
+				<td><input type="checkbox" name="hobby"> 运动<input
+					type="checkbox" name="hobby"> 聊天<input type="checkbox"
+					name="hobby"> 玩游戏</td>
+			</tr>
+			<tr>
+				<td>喜欢的城市:</td>
+				<td><select>
+						<option>--请选择--</option>
+						<option>--南京--</option>
+						<option>--上海--</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" disabled="disabled"
+					value="同意服务条款，提交注册信息">&nbsp<input type="reset" value="重填" />
+				</td>
+			</tr>
+
+		</table>
+</body>
+</html>

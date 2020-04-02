@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+#content{
+	width:980px;
+	height:150px;
+}
+div{
+	width:100%;
+	text-align: center;
+}

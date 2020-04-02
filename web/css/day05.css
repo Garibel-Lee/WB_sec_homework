@@ -1,0 +1,462 @@
+@charset "UTF-8";
+*{
+	margin:auto 0px ;
+}
+#head {
+	z-index: 1000;
+	position: relative;
+	left: 120px;
+	width: 1080px;
+	height: 92px;
+}
+
+#head img {
+	position: relative;
+	left: 160px;
+	top: 10px;
+	height: 80px;
+}
+
+#top-pattern {
+	position: absolute;
+	z-index: 100;
+	float: left;
+	left: 400px;
+	top: 9px;
+	width: 50px;
+	height: 50px;
+}
+
+#head-right {
+	position: absolute;
+	z-index: 10;
+	float: left;
+	left: 430px;
+	top: 5px;
+	width: 600px;
+	height: 70px;
+}
+
+#head-right td {
+	width: 100px;
+}
+
+#head-right a {
+	color: gray;
+	font-size: 14px;
+	font-family: 宋体;
+}
+
+#head-right a:link {
+	color: gray;
+	text-decoration: none;
+}
+
+#head-right a:hover {
+	color: blue;
+	text-decoration: none;
+}
+
+#head-right a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+#head-serarch {
+	position: absolute;
+	z-index: 10;
+	float: left;
+	left: -30px;
+	top: 35px;
+	width: 600px;
+	height: 50px;
+}
+
+#head-serarch .long-input {
+	z-index: 10;
+	width: 500px;
+	height: 27px;
+	border-color: #3eb7fe;
+	border-width: 5px;
+	border-style: solid;
+	background-image: url('../resources/image_day05/icon.gif');
+	background-repeat: no-repeat;
+}
+
+#head-serarch .serarch-input {
+	width: 80px;
+	height: 38px;
+	border-color: #3eb7fe;
+	border-width: 5px;
+	border-style: solid;
+	color: white;
+	background-color: #3eb7fe;
+}
+
+#snow-border {
+	z-index: 1000;
+	width: 735px;
+	height: 600px;
+	margin-bottom:25px;
+	position: relative;
+	top: 10px;
+	left: 120px;
+	border: solid 1px #DCDCDC;
+}
+
+#snower img {
+	z-index: 800;
+	width: 725px;
+	height: 277px;
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+
+#snow-table {
+	z-index: 1000;
+	width: 725px;
+	height: 277px;
+	position: relative;
+	top: 12px;
+	left: 9px;
+}
+
+#snow-table th {
+	width: 300px;
+	height: 17px;
+	text-align: left;
+	color: #000000;
+	font-size: 12px;
+	font-family: 宋体;
+}
+
+#snow-table img {
+	width: 75px;
+	height: 75px;
+}
+
+#snow-table ul {
+	position: relative;
+	left: -35px;
+	list-style: none;
+}
+
+#snow-table th font {
+	color: orange;
+	font-size: 13px;
+}
+
+#snow-table li font {
+	color: blue;
+	font-size: 13px;
+}
+
+#snow-table  li img {
+	width: 10px;
+	height: 10px;
+}
+
+#snow-table a {
+	font-size: 12px;
+	font-family: 宋体;
+	color:RGB(121,121,121);
+}
+
+#snow-table a:link {
+	color: RGB(121,121,121);
+	text-decoration: none;
+}
+
+#login-right {
+	z-index: 700;
+	width: 325px;
+	height: 275px;
+	position: relative;
+	top: -620px;
+	left: 875px;
+	border: solid 1px #DCDCDC;
+	background-color: #ecf5fc;
+
+}
+
+#login-right .login-logo {
+	position: relative;
+	top: 6px;
+	left: 10px;
+	font-size: 20px;
+	font-weight: bolder;
+	color: blue;
+}
+
+#login-right .login-LOGIN {
+	position: relative;
+	top: -20px;
+	left: 60px;
+	font-size: 20px;
+	font-weight: bolder;
+	color: orange;
+}
+
+#login-right .index {
+	z-index: 600;
+	position: relative;
+	top: -30px;
+	left: 10px;
+	height: 0px;
+	width: 200px;
+	font-size: 13px;
+	color: blue;
+	font-family: 宋体;
+}
+
+#login-right .password {
+	z-index: 600;
+	position: relative;
+	top: 5px;
+	left: 10px;
+	height: 30px;
+	width: 200px;
+	font-size: 13px;
+	color: blue;
+	font-family: 宋体;
+}
+
+#login-right .input-style1 {
+	position: relative;
+	top: 0px;
+	left : 10px;
+	width: 200px;
+	height: 25px;
+	left: 10px;
+}
+
+#login-right .input-style2{
+	position: relative;
+	top: 0px;
+	left: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+
+#login-right .login-remeber {
+	position: relative;
+	top: -25px;
+	left: 40px;
+	font-size: 17px;
+	color: gray;
+}
+
+#login-right .input-style3{
+	position: relative;
+	top: 0px;
+	left: 10px;
+	width: 90px;
+	height: 30px;
+	color: white;
+	font-size:16px;
+	background-color:  #fe7105;
+}
+
+#login-right .forget{
+	z-index: 600;
+	position: relative;
+	top: -21px;
+	left: 110px;
+	height: 0px;
+	width: 200px;
+	font-size: 13px;
+	color: blue;
+	font-family: 宋体;
+
+}
+
+#register-right{
+	z-index: 500;
+	position: relative;
+	top: -600px;
+	left: 874px;
+
+	height: 75px;
+	width: 325px;
+	border: solid 1px #DCDCDC;
+	background-color: #ecf5fc;
+}
+
+#register-right p{
+
+	font-size: 20px;
+	color: gray;
+	font-family: 楷体;
+}
+
+#register-right a{
+
+	font-size: 15px;
+	color: blue;
+	font-family: 楷体;
+}
+
+#neighbour-right {
+	position: relative;
+	top: -580px;
+	left: 874px;
+	height: 205px;
+	width: 325px;
+	font-size: 15px;
+	color: blue;
+	border: solid 1px #DCDCDC;
+
+}
+
+
+#neighbour-word{
+
+	position: relative;
+	top: 0px;
+	left: px;
+	height: 35px;
+	width: 325px;
+	background-color:#f2f2f2;
+	border-bottom: solid 1px ;
+	border-bottom-color: blue;
+
+
+
+}
+
+#neighbour-word .neighbour-find{
+	position: relative;
+	font-size: 14px;
+	margin-left: 8px;
+	top: 5px;
+	color: black;
+	font-weight: bold;
+}
+
+
+#neighbour-word .neighbour-er{
+	position: relative;
+	font-size: 12px;
+	left:0px;
+	top: 5px;
+	color: orange;
+	font-weight: bold;
+}
+
+
+#neighbour-table img{
+	width:60px;
+	height:60px;
+}
+
+
+
+#neighbour-table ul{
+	list-style: none;
+	position:relative;
+	left: -30px;
+	height: 60px;
+}
+
+
+
+#neighbour-table li{
+	list-style: none;
+	width: 62px;
+	height:23px;
+
+}
+
+#neighbour-table li a{
+	list-style: none;
+	font-size: 10px;
+	width: 83px;
+	color: blue;
+	text-decoration: none;
+
+}
+
+#neighbour-table li a font{
+
+	font-size: 12px;
+	width: 80px;
+	color: gray;
+
+}
+
+#img-first{
+	position: relative;
+	top: -570px;
+	left: 120px;
+	height: 105px;
+	width: 730px;
+	font-size: 15px;
+
+
+}
+
+#img-first img{
+	height: 108px;
+	width: 740px;
+}
+
+#img-second{
+	position: relative;
+	top: -674px;
+	left: 874px;
+	height: 105px;
+	width: 730px;
+
+
+}
+
+#img-second img{
+	height: 105px;
+	width: 330px;
+}
+
+#bottom-word{
+	position: relative;
+	top: -665px;
+	left: 120px;
+	height: 30px;
+	width: 1080px;
+	background-color: #f3f3f3;
+	border-color: rgba(232,232,232,0.5)
+
+}
+
+#bottom-word font a {
+	font-size: 10px;
+	text-decoration: none;
+	color: black;
+	width: 20px;
+	position: relative;
+	left:280px;
+}
+
+#bottom{
+	position: relative;
+	top: -655px;
+	left: 120px;
+	height: 30px;
+	width: 1080px;
+
+}
+
+#bottom .gray-style{
+	font-size: 10px;
+	color: gray;
+	left: 270px;
+	position: relative;
+}
+
+#bottom .black-style{
+	font-size: 12px;
+	color: black;
+	left: 280px;
+	position: relative;
+	width: 40px;
+}
